@@ -8,28 +8,34 @@ import {
   IonButton,
 } from "@ionic/react";
 
-const Login: React.FC = () => (
-  <IonPage>
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>Login</IonTitle>
-      </IonToolbar>
-    </IonHeader>
-    <IonContent>
-      <IonHeader collapse="condense">
+const Login: React.FC = () => {
+  return (
+    <IonPage>
+      <IonHeader>
         <IonToolbar>
-          <IonTitle size="large">Login</IonTitle>
+          <IonTitle>Login</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <div style={{ margin: "12em 1em" }}>
-        <IonButton expand="block" routerLink="/tabs">
-          Login
-        </IonButton>
-        <IonButton expand="block" fill="outline" routerLink="/signup">
-          Signup
-        </IonButton>
-      </div>
-    </IonContent>
-  </IonPage>
-);
+      <IonContent>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Login</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <div style={{ margin: "12em 1em" }}>
+          <IonButton
+            expand="block"
+            routerLink="/tabs/2"
+            routerDirection="forward"
+          >
+            Login
+          </IonButton>
+          <IonButton expand="block" fill="outline" routerLink="/signup">
+            Signup
+          </IonButton>
+        </div>
+      </IonContent>
+    </IonPage>
+  );
+};
 export default Login;
