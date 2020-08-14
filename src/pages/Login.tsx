@@ -7,8 +7,15 @@ import {
   IonContent,
   IonButton,
 } from "@ionic/react";
+import { RouteComponentProps } from "react-router";
 
-const Login: React.FC = () => {
+const Login: React.FC<RouteComponentProps> = ({ history }) => {
+  const btn = () => {
+    history.push("/signup", {
+      direction: "forward",
+    });
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -30,7 +37,7 @@ const Login: React.FC = () => {
           >
             Login
           </IonButton>
-          <IonButton expand="block" fill="outline" routerLink="/signup">
+          <IonButton expand="block" fill="outline" onClick={() => btn()}>
             Signup
           </IonButton>
         </div>
